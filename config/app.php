@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pl',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'pl',
 
     /*
     |--------------------------------------------------------------------------
@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Fiszki\Providers\AppServiceProvider::class,
+        Fiszki\Providers\AuthServiceProvider::class,
+        Fiszki\Providers\EventServiceProvider::class,
+        Fiszki\Providers\RouteServiceProvider::class,
 
     ],
 
