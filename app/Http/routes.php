@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/idioms/list', 'IdiomsController@getList');
+
+Route::get('/idioms/add', 'IdiomsController@newIdiom');
+Route::post('/idioms/add', 'IdiomsController@newIdiomSave');
