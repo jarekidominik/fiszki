@@ -17,17 +17,30 @@
                         </ul>
                     </div>
                     @endif
-                    {{ Form::open(array('action' => array('IdiomsController@newIdiom'))) }}
-                    {{ Form::label('idiom_en', 'Idiom') }}
-                    {{ Form::text('idiom_en') }}
-                    {{ Form::label('use_example_en', 'Przykład użycia') }}
-                    {{ Form::text('use_example_en') }}
-                    {{ Form::label('idiom_pl', 'Idiom') }}
-                    {{ Form::text('idiom_pl') }}
-                    {{ Form::label('use_example_pl', 'Przykład użycia') }}
-                    {{ Form::text('use_example_pl') }}
-
-                    {{ Form::submit('Click Me!') }}
+                    {{ Form::open(array('action' => array('IdiomsController@newIdiom'))) }}                   
+                    <div class="form-group">
+                        <label for="idiom_en">Idiom angielski</label>
+                        <input type="text" name="idiom_en" id="idiom_en" class="form-control">
+                    </div>
+                        
+                    <div class="form-group">
+                        <label for="idiom_pl">Idiom polski</label>
+                        <input type="text" name="idiom_pl" id="idiom_pl" class="form-control">
+                    </div>
+                        
+                    <div class="form-group">   
+                        <label for="use_example_en">Użycie angielskie</label>
+                        <input type="text" name="use_example_en" id="use_example_en" class="form-control">
+                    </div>
+                        
+                    <div class="form-group">
+                        <label for="use_example_pl">Użycie polskie</label>
+                        <input type="text" name="use_example_pl" id="use_example_pl" class="form-control">
+                    </div>
+                        
+                    <div class="form-group">
+                        <input type="submit" name="submit" id="submit" class="btn btn-success btn-lg btn-block">
+                    </div>
                     {{ Form::close() }}
                 </div>
             </div>
