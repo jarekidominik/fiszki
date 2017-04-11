@@ -6,6 +6,7 @@ use Fiszki\Http\Requests;
 use Illuminate\Http\Request;
 use Response;
 use View;
+use Fiszki\Idioms;
 
 class IdiomsController extends Controller {
 
@@ -33,7 +34,7 @@ class IdiomsController extends Controller {
 
     public function newIdiomSave(Request $request) {
 
-        $this->validate($request, [
+       /* $this->validate($request, [
             'idiom_en' => 'required|unique:posts|max:255',
             'use_example_en' => 'required',
             'idiom_pl' => 'required|unique:posts|max:255',
@@ -44,10 +45,14 @@ class IdiomsController extends Controller {
             return redirect('idioms/add')
                         ->withErrors($validator)
                         ->withInput();
-        }
-
-
-      //  return Response::make('Idioim dodany!');
+        } */
+        
+        
+        $idioms = new Idioms;           
+        $idioms->create($request->all());
+               
+        return Response::make('Idioim dodany!');
     }
 
+            
 }

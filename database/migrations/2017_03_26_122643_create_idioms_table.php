@@ -14,11 +14,11 @@ class CreateIdiomsTable extends Migration {
         Schema::create('idioms', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->char('language', 2);
-            $table->string('idiom');
-            $table->string('use_example');
-            $table->integer('translate_id')->unsigned();
-            $table->foreign('translate_id')->references('id')->on('idioms');
+            $table->string('idiom_en');
+            $table->string('use_example_en');
+            $table->string('idiom_pl');
+            $table->string('use_example_pl');
+
             
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
