@@ -8,7 +8,13 @@
                 <div class="panel-heading">Witam</div>
 
                 <div class="panel-body">
-                    Witamy ! zaloguj się lub załóż nowe konto.
+                    @if (Auth::guest())
+                    Witaj w aplikacji Fiszki. Zaloguj się na swoje konto lub założ nowe.
+                    @endif
+                    
+                    @if (!Auth::guest())
+                    Baw się dobrze.
+                    @endif
             </div>
         </div>
     </div>
