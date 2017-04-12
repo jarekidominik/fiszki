@@ -37,7 +37,7 @@
                         <label for="use_example_pl">Użycie polskie</label>
                         <input type="text" name="use_example_pl" id="use_example_pl" class="form-control">
                     </div>
-                        
+                    
                     <div class="form-group">
                         <input type="submit" name="submit" id="submit" class="btn btn-success btn-lg btn-block">
                     </div>

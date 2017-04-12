@@ -20,8 +20,8 @@ class CreateIdiomsTable extends Migration {
             $table->string('use_example_pl');
 
             
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+         //   $table->integer('user_id')->unsigned();
+         //   $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

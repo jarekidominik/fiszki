@@ -25,7 +25,10 @@ class IdiomsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function getList() {
-        return view('idioms/list');
+        
+        $idioms = Idioms::all();
+        
+        return view('/idioms/list', ['idioms' => $idioms]);
     }
 
     public function newIdiom() {
@@ -34,18 +37,18 @@ class IdiomsController extends Controller {
 
     public function newIdiomSave(Request $request) {
 
-       /* $this->validate($request, [
+      /*   $this->validate($request, [
             'idiom_en' => 'required|unique:posts|max:255',
             'use_example_en' => 'required',
             'idiom_pl' => 'required|unique:posts|max:255',
             'use_example_pl' => 'required',
         ]);
 
-        if ($validator->fails()) {
+       if ($validator->fails()) {
             return redirect('idioms/add')
                         ->withErrors($validator)
                         ->withInput();
-        } */
+        } */ 
         
         
         $idioms = new Idioms;           
