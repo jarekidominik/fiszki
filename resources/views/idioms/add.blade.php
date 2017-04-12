@@ -17,7 +17,8 @@
                         </ul>
                     </div>
                     @endif
-                    {{ Form::open(array('action' => array('IdiomsController@newIdiom'))) }}                   
+                    {{ Form::open(array('action' => array('IdiomsController@newIdiom'))) }}     
+                    <input type="hidden" name="user_id" id="user_id" value="{{Auth::user()->id}}" class="form-control">
                     <div class="form-group">
                         <label for="idiom_en">Idiom angielski</label>
                         <input type="text" name="idiom_en" id="idiom_en" class="form-control">
