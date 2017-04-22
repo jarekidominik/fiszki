@@ -26,3 +26,4 @@ Route::post('/idioms/add','IdiomsController@newIdiomSave');
 
 Route::get('/idioms/learn', 'IdiomsController@showIdiom');
 
+

@@ -47,38 +47,24 @@ class IdiomsController extends Controller {
 
     public function newIdiomSave(Request $request) {
 
-      
-        
-       /*   $this->validate($request, [
-            'idiom_en' => 'required|unique:posts|max:255',
+        $validator = Validator::make($request->all(), [
+            'idiom_en' => 'required|unique:idioms|max:255',
             'use_example_en' => 'required',
-            'idiom_pl' => 'required|unique:posts|max:255',
+            'idiom_pl' => 'required|unique:idioms|max:255',
             'use_example_pl' => 'required',
         ]);
 
         if ($validator->fails()) {
             return redirect('idioms/add')
                         ->withErrors($validator)
-                        ->withInput();
-        } */
-         /*    Validator::make($request->all(), [
-            'idiom_en' => 'required|unique:posts|max:255',
-            'use_example_en' => 'required',
-            'idiom_pl' => 'required|unique:posts|max:255',
-            'use_example_pl' => 'required',
-        ]);
-
-       /* if ($validator->fails()) {
-            return redirect('idioms/add')
-                        ->withErrors($validator)
-                        ->withInput();
+                        ->withInput($request->all());
         }
         
-        */
+        
         $idioms = new Idioms;           
         $idioms->create($request->all());
-                 
-        return Response::make('Idioim dodany!');
+       
+        return $this->getList();
     }
  
             

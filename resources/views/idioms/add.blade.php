@@ -21,22 +21,22 @@
                     <input type="hidden" name="user_id" id="user_id" value="{{Auth::user()->id}}" class="form-control">
                     <div class="form-group">
                         <label for="idiom_en">Idiom angielski</label>
-                        <input type="text" name="idiom_en" id="idiom_en" class="form-control">
+                        <input type="text" name="idiom_en" id="idiom_en" class="form-control" value="{{ old('idiom_en') }}">
                     </div>
                         
                     <div class="form-group">
                         <label for="idiom_pl">Idiom polski</label>
-                        <input type="text" name="idiom_pl" id="idiom_pl" class="form-control">
+                        <input type="text" name="idiom_pl" id="idiom_pl" class="form-control" value="{{ old('idiom_pl') }}">
                     </div>
                         
                     <div class="form-group">   
                         <label for="use_example_en">Użycie angielskie</label>
-                        <input type="text" name="use_example_en" id="use_example_en" class="form-control">
+                        <input type="text" name="use_example_en" id="use_example_en" class="form-control" value="{{ old('use_example_en') }}">
                     </div>
                         
                     <div class="form-group">
                         <label for="use_example_pl">Użycie polskie</label>
-                        <input type="text" name="use_example_pl" id="use_example_pl" class="form-control">
+                        <input type="text" name="use_example_pl" id="use_example_pl" class="form-control" value="{{ old('use_example_pl') }}">
                     </div>
                     
                     <div class="form-group">
