@@ -60,7 +60,7 @@
                         </li>
                      </ul>
                      <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/test') }}">Sprawdź się</a></li>
+                        <li><a href="{{ url('/exams') }}">Sprawdź się</a></li>
                         <li><a href="{{ url('/ranking') }}">Ranking</a></li>
                         <li><a href="{{ url('/home') }}">home</a></li>
                      </ul>
