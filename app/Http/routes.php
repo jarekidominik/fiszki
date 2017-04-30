@@ -29,3 +29,4 @@ Route::get('/idioms/learn', 'IdiomsController@showIdiom');
 Route::get('/exams', 'ExamsController@view');
 Route::post('/exams/start','ExamsController@newExam');
 Route::post('/exams/end','ExamsController@endExam');
+Route::post('/exams/check','ExamsController@checkExam');

@@ -7,6 +7,7 @@ use Fiszki\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use View;
 use Fiszki\Exams;
+use Fiszki\Idioms;
 use DB;
 
 class ExamsController extends Controller {
@@ -33,21 +34,47 @@ class ExamsController extends Controller {
         ];
 
         $exams1 = $exams->create($attributes);
+        $idiom = $this->getRandIdiom();
 
-        return view('/exams', ['exam' => $exams1]);
+        return view('/exams', ['exam' => $exams1, 'idiom' => $idiom]);
     }
 
     public function endExam(Request $request) {
 
-      //  $exams = new Exams;           
-      //  $idioms->create($request->all());
-        $id = $request->input('id',null);
+        //  $exams = new Exams;           
+        //  $idioms->create($request->all());
+        $id = $request->input('id', null);
         $exams = Exams::where('id', $id)->first();
         //$exams = DB::table('exams')->where('id', '1')->first();
-        
+
         $exams->setAttribute('end_time', date_create('now')->format('Y-m-d H:i:s'));
         $exams->touch();
         return view('/exams');
+    }
+
+    public function checkExam(Request $request) {
+        $id = $request->input('id', null);
+        $idiom_answer = preg_replace("/[^a-zA-Z]+/", "", $request->input('idiom_answer', null));
+        $idiom_pl = preg_replace("/[^a-zA-Z]+/", "", $request->input('idiom_pl', null));     
+        
+        $exams = Exams::where('id', $id)->first();
+        
+        if (strcasecmp($idiom_pl, $idiom_answer) == 0) {
+          $correct = $exams->getAttribute('correct_words') + 1;
+          $exams->setAttribute('correct_words', $correct);
+        } else {
+          $wrong = $exams->getAttribute('incorrect_words') + 1;
+          $exams->setAttribute('incorrect_words', $wrong);  
+        }
+
+        $exams->touch();
+        $idiom = $this->getRandIdiom();
+        return view('/exams', ['exam' => $exams, 'idiom' => $idiom]);
+    }
+
+    private function getRandIdiom() {
+        $idiom = Idioms::all()->random(1);
+        return $idiom;
     }
 
     /**
