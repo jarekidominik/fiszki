@@ -5,7 +5,10 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Lista dostępnych idiomów</div>
+                <div class="panel-heading">Lista dostępnych idiomów
+                 <a href="{{url('idioms/add')}}" class="btn btn-success pull-right" value="Przetłumacz" style="margin-top: -6px;">Dodaj słówko</a>      
+                  
+                </div>
 
                 <div class="panel-body">
                     

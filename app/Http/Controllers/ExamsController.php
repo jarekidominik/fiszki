@@ -85,7 +85,16 @@ class ExamsController extends Controller {
     public function view() {
         return view('/exams');
     }
+   
+    public function viewRanking() {
+        return view('/rank');
+    }
 
+    public function getRanking() {
+               $exams = Exams::all();
+        
+        return view('/rank', ['exams' => $exams]);
+    }
     /**
      * Store a newly created resource in storage.
      *

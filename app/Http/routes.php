@@ -30,3 +30,6 @@ Route::get('/exams', 'ExamsController@view');
 Route::post('/exams/start','ExamsController@newExam');
 Route::post('/exams/end','ExamsController@endExam');
 Route::post('/exams/check','ExamsController@checkExam');
+
+Route::get('/rank', 'ExamsController@viewRanking');
+Route::get('/rank', 'ExamsController@getRanking');
