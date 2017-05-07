@@ -28,21 +28,15 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="row text-center">
+                        <div class="text-center">
                             <label  class="col-md-4 control-label">Podaj tłumaczenie poniższego zwrotu:</label>
                             <input type="hidden" name="id" id="id" value="{{$exam->id}}" class="form-control">
                             <label for="idiom" class="col-md-12">{{$idiom->idiom_en}}</label>
                             <input type="hidden" name="idiom_en" value="{{$idiom->idiom_en}}"/>
                             <input type="hidden" name="idiom_pl" value="{{$idiom->idiom_pl}}"/>
-                        </div>
-                        <div class="row text-center">
-                            <input type="text" name="idiom_answer" id="id_idiom_answer" value="" title="Wpisz tłumaczenie" class="col-md-10 form-control">
-                        </div>
-                        <div class="row text-center">
-                                            
-                                <input type="submit" name="newTesthh" id="newTesthh" class="btn btn-success btn-lg btn-block" value="Sprawdź"/>                   
-            
-                        </div>
+                        </div>                       
+                        <input type="text" name="idiom_answer" id="id_idiom_answer" value="" title="Wpisz tłumaczenie" class="col-md-10 form-control" style="margin-bottom: 15px">                                                                  
+                        <input type="submit" name="newTesthh" id="newTesthh" class="btn btn-check btn-lg btn-block" value="Sprawdź"/>                                                    
                     </div>
                     {{ Form::close() }} 
 

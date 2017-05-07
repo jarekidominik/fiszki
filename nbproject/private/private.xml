@@ -9,14 +9,19 @@
             <file>file:/C:/xampp/htdocs/laravel/app/Http/Controllers/IdiomsController.php</file>
         </group>
         <group name="cgmes-ms">
+            <file>file:/C:/xampp/htdocs/fiszki/resources/views/exams.blade.php</file>
+            <file>file:/C:/xampp/htdocs/fiszki/app/Http/Controllers/HomeController.php</file>
+            <file>file:/C:/xampp/htdocs/fiszki/resources/views/auth/register.blade.php</file>
+            <file>file:/C:/xampp/htdocs/fiszki/resources/views/layouts/app.blade.php</file>
+            <file>file:/C:/xampp/htdocs/fiszki/resources/views/idioms/add.blade.php</file>
+            <file>file:/C:/xampp/htdocs/fiszki/resources/views/idioms/learn.blade.php</file>
+            <file>file:/C:/xampp/htdocs/fiszki/app/Exams.php</file>
+            <file>file:/C:/xampp/htdocs/fiszki/resources/views/rank.blade.php</file>
             <file>file:/C:/xampp/htdocs/fiszki/app/Http/Controllers/IdiomsController.php</file>
             <file>file:/C:/xampp/htdocs/fiszki/app/Idioms.php</file>
             <file>file:/C:/xampp/htdocs/fiszki/app/Http/routes.php</file>
-            <file>file:/C:/xampp/htdocs/fiszki/resources/views/exams.blade.php</file>
-            <file>file:/C:/xampp/htdocs/fiszki/resources/views/auth/register.blade.php</file>
             <file>file:/C:/xampp/htdocs/fiszki/app/Http/Controllers/ExamsController.php</file>
-            <file>file:/C:/xampp/htdocs/fiszki/resources/views/idioms/learn.blade.php</file>
-            <file>file:/C:/xampp/htdocs/fiszki/app/Exams.php</file>
+            <file>file:/C:/xampp/htdocs/fiszki/resources/views/welcome.blade.php</file>
         </group>
     </open-files>
 </project-private>

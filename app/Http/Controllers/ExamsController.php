@@ -91,7 +91,9 @@ class ExamsController extends Controller {
     }
 
     public function getRanking() {
-               $exams = Exams::all();
+        $exams = DB::select('SELECT u.name, SEC_TO_TIME(TIMESTAMPDIFF(SECOND, e.start_time, end_time)) as duration, correct_words, incorrect_words from users u, exams e where u.id = e.id_user and e.end_time > 0 order by correct_words desc, duration');
+        
+         //      $exams = Exams::all();
         
         return view('/rank', ['exams' => $exams]);
     }

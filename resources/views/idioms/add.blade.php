@@ -25,7 +25,7 @@
                     </div>
                         
                     <div class="form-group">
-                        <label for="idiom_pl">Idiom polski</label>
+                        <label for="idiom_pl">Idiom polski (polskie tłumaczenie)</label>
                         <input type="text" name="idiom_pl" id="idiom_pl" class="form-control" value="{{ old('idiom_pl') }}">
                     </div>
                         

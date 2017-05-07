@@ -53,8 +53,9 @@
                                  Nauka
                              </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/idioms/list') }}">Lista idiomów</a></li>
                                 <li><a href="{{ url('/idioms/learn') }}">Naucz się</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ url('/idioms/list') }}">Lista idiomów</a></li>                              
                                 <li><a href="{{ url('/idioms/add') }}">Dodaj własne słówka</a></li>
                             </ul>
                         </li>
@@ -62,7 +63,6 @@
                      <ul class="nav navbar-nav">
                         <li><a href="{{ url('/exams') }}">Sprawdź się</a></li>
                         <li><a href="{{ url('/rank') }}">Ranking</a></li>
-                        <li><a href="{{ url('/home') }}">home</a></li>
                      </ul>
                      <ul class="nav navbar-nav">
                         
